@@ -9,6 +9,7 @@ import API from './app/lib/API'
 
 import Home from './app/views/Home'
 import Detail from './app/views/Detail'
+import Scanner from './app/views/Scanner'
 
 const Stack = createStackNavigator();
 
@@ -45,7 +46,9 @@ class App extends Component {
         <NavigationContainer>
           <Stack.Navigator screenOptions={{headerShown: false}}>
               <Stack.Screen name="Home" component={ Home }/>                
-              <Stack.Screen name="Detail" component={ Detail }/>                  
+              <Stack.Screen name="Detail" component={ Detail }/>      
+              <Stack.Screen name="Scanner" component={ Scanner }/>                  
+            
           </Stack.Navigator>
         </NavigationContainer>
       )

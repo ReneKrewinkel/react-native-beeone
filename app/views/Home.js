@@ -24,7 +24,7 @@ class Home extends Component {
       isLoaded: false,
       textSize: 40,
       data: [],
-      screenActive: 1,
+      screenActive: 0,
       fabActive: false
     }
 
@@ -133,7 +133,7 @@ class Home extends Component {
                 active={ this.state.screenActive === 1}>
           <Text>Camera</Text>
         </Button>
-        <Button onPress={ () => this.setState({screenActive: 2})}
+        <Button onPress={ () => this.props.navigation.navigate("Scanner")}
                 active={ this.state.screenActive === 2}>
           <Text>Iets Anders</Text>
         </Button>
