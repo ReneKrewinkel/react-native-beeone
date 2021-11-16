@@ -129,7 +129,7 @@ class Home extends Component {
                 active={ this.state.screenActive === 0}>
           <Text>Onderhoud</Text>
         </Button>
-        <Button onPress={ () => this.setState({screenActive: 1})}
+        <Button onPress={ () => this.props.navigation.navigate("Detail") }
                 active={ this.state.screenActive === 1}>
           <Text>Camera</Text>
         </Button>
