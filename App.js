@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, 
+import { View, 
          TouchableOpacity, FlatList, SafeAreaView,
          Image } from 'react-native'
 import ScrollItem from './app/components/ScrollItem'
@@ -7,6 +7,12 @@ import ScrollItem from './app/components/ScrollItem'
 import Spinner from './app/components/Spinner'
 import API from './app/lib/API'
 import * as Styles from './app/styles/Styles'
+
+
+import { Container, Accordion, 
+  Header, Text, Title, 
+  Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Fab} 
+from 'native-base';
 
 class App extends Component {
 
@@ -70,12 +76,43 @@ class App extends Component {
 
   render() {
     return( 
-      <SafeAreaView>
+      <Container>
+      <Header>
+        <Left>
+          <Button transparent>
+            <Icon name='arrow-back' />
+          </Button>
+        </Left>
+        <Body>
+          <Title>Header</Title>
+        </Body>
+        <Right>
+          <Button transparent>
+            <Icon name='menu' />
+          </Button>
+        </Right>
+    </Header>                
+    <Content>
     
-      { this.renderImage() }
-      { this.renderContent() }
-    
-      </SafeAreaView>
+
+    </Content>
+    <Footer>
+    <FooterTab>
+        <Button>
+          <Text>Apps</Text>
+        </Button>
+        <Button>
+          <Text>Camera</Text>
+        </Button>
+        <Button active>
+          <Text>Navigate</Text>
+        </Button>
+        <Button>
+          <Text>Contact</Text>
+        </Button>
+      </FooterTab>
+      </Footer>
+  </Container>
     )
   }
 
